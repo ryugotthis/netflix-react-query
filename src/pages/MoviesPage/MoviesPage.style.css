@@ -1,0 +1,11 @@
+.custom-movie .movie-card img {
+  border-radius: 0 !important;
+}
+
+@media screen and (min-width: 769px) {
+  .custom-movie .custom-col {
+    width: 20% !important;
+    margin-bottom: 2vw;
+    /* and (max-width: 1441px) */
+  }
+}
