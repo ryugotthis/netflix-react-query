@@ -9,3 +9,21 @@
     /* and (max-width: 1441px) */
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 (필요한 경우) */
+  margin: 20px auto; /* 상하 여백과 중앙 정렬 */
+  position: relative;
+  --bs-pagination-padding-x: 1rem !important;
+  --bs-pagination-padding-y: 1rem !important;
+  --bs-pagination-font-size: 1.5rem !important;
+  --bs-pagination-color: black !important;
+  --bs-pagination-hover-color: red !important;
+  --bs-pagination-active-bg: red !important;
+  --bs-pagination-active-border-color: red !important;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25) !important;
+  --bs-pagination-focus-color: white !important;
+  --bs-pagination-focus-bg: red !important;
+}

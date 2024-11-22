@@ -6,13 +6,13 @@ import starIcon from '../../imgs/star.png';
 import { useMovieGenres } from '../../hooks/useMovieGenres';
 
 const MovieCard = ({ movie, key }) => {
-  console.log('카드입니다', key, movie);
+  // console.log('카드입니다', key, movie);
   const [modalShow, setModalShow] = React.useState(false);
   const { data: genreData } = useMovieGenres();
-  console.log('check genres', genreData);
+  // console.log('check genres', genreData);
 
   function MyVerticallyCenteredModal(props) {
-    console.log('속성을보자', props);
+    // console.log('속성을보자', props);
     const showGenres = (genreIdList) => {
       if (!genreData) return [];
       const genreNamList = genreIdList.map((id) => {
