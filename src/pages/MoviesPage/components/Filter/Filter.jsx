@@ -1,0 +1,92 @@
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useFilterMovieQuery } from '../../../../hooks/useFilterMovie';
+import { useMovieGenres } from '../../../../hooks/useMovieGenres';
+import Dropdown from 'react-bootstrap/Dropdown';
+import '../../MoviesPage.style.css';
+
+import SpinnerMoviesPage from '../Spinner/SpinnerMoviesPage';
+
+const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
+  const navigate = useNavigate();
+  const sortName = [
+    { name: 'Default', value: 'vote_count.desc' },
+    { name: 'Most Popular', value: 'popularity.desc' },
+    { name: 'Top Rated', value: 'vote_average.desc' },
+    { name: 'Oldest Movies', value: 'primary_release_date.asc' },
+  ];
+  const {
+    data: filterData,
+    isLoading,
+    isError,
+    error,
+  } = useFilterMovieQuery({
+    sort,
+    genre,
+    page,
+  });
+  const { data: genreList } = useMovieGenres();
+
+  // const handlePageClick = ({ selected }) => {
+  //   setPage(selected + 1);
+  //   window.scrollTo(0, 0);
+  // };
+
+  const sortByClick = (sortValue) => {
+    setGenre('');
+    setSort(sortValue);
+    setPage(1);
+    navigate(`/movies?sort=${sortValue}`);
+  };
+
+  const genreClick = (genre) => {
+    setSort('');
+    setGenre(genre);
+    setPage(1);
+    navigate(`/movies?genre=${genre}`);
+  };
+
+  useEffect(() => {
+    if (filterData) {
+      setData(filterData);
+    }
+  }, [filterData, page, sort, genre]);
+  if (isLoading) return <SpinnerMoviesPage />;
+  return (
+    <div>
+      {/* 장르 드롭다운 */}
+      <Dropdown className="genre-dropdown">
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          {genre ? genreList.find((item) => item.id === genre)?.name : 'Genre'}
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          {genreList?.map((item) => (
+            // onClick={() => genreClick(item.name)}
+            <Dropdown.Item onClick={() => genreClick(item.id)}>
+              {item.name}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+      {/* 정렬 드롭다운 */}
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          {sort
+            ? sortName.find((item) => item.value === sort)?.name
+            : 'Sort By'}
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          {sortName.map((item) => (
+            <Dropdown.Item onClick={() => sortByClick(item.value)}>
+              {item.name}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  );
+};
+
+export default Filter;

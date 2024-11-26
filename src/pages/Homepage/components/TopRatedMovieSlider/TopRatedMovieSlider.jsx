@@ -10,17 +10,25 @@ const TopRatedMovieSlider = () => {
 
   if (isLoading)
     return (
-      <Spinner
-        animation="border"
+      <div
         style={{
-          width: '200px',
-          height: '200px',
-          position: 'relative',
-          left: '50vw',
-          top: '25vh',
-          margin: '0 0 0 -100px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          width: '100%',
+          height: '50vh',
+          margin: '2vw 0',
+          flexWrap: 'wrap',
         }}
-      />
+      >
+        <Spinner
+          animation="border"
+          style={{
+            width: '200px',
+            height: '200px',
+          }}
+        />
+      </div>
     );
   if (isError) return <Alert variant="danger">{error.message}</Alert>;
   return (

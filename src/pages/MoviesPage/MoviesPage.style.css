@@ -2,6 +2,26 @@
   border-radius: 0 !important;
 }
 
+.dropdown {
+  position: absolute !important;
+  right: 5rem;
+}
+.genre-dropdown.dropdown {
+  right: 15rem;
+}
+
+.dropdown button {
+  --bs-btn-bg: grey;
+  --bs-btn-border-color: grey;
+  --bs-btn-hover-bg: black;
+  --bs-btn-hover-border-color: grey;
+  --bs-btn-active-bg: black;
+  --bs-btn-active-border-color: grey;
+}
+.dropdown .dropdown-menu a.dropdown-item:hover {
+  background-color: black;
+  color: white;
+}
 @media screen and (min-width: 769px) {
   .custom-movie .custom-col {
     width: 20% !important;
