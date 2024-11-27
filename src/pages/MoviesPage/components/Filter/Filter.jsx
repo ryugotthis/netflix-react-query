@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFilterMovieQuery } from '../../../../hooks/useFilterMovie';
 import { useMovieGenres } from '../../../../hooks/useMovieGenres';
 import Dropdown from 'react-bootstrap/Dropdown';
-import '../../MoviesPage.style.css';
-
+import './Filter.style.css';
+import { Alert } from 'react-bootstrap';
 import SpinnerMoviesPage from '../Spinner/SpinnerMoviesPage';
 
 const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
@@ -17,20 +17,20 @@ const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
   ];
   const {
     data: filterData,
-    isLoading,
-    isError,
-    error,
+    isLoading: isFilterDataLoading,
+    isError: isFilterDataError,
+    error: filterError,
   } = useFilterMovieQuery({
     sort,
     genre,
     page,
   });
-  const { data: genreList } = useMovieGenres();
-
-  // const handlePageClick = ({ selected }) => {
-  //   setPage(selected + 1);
-  //   window.scrollTo(0, 0);
-  // };
+  const {
+    data: genreList,
+    isLoading: isGenreLoading,
+    isError: isGenreError,
+    error: genreError,
+  } = useMovieGenres();
 
   const sortByClick = (sortValue) => {
     setGenre('');
@@ -46,12 +46,22 @@ const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
     navigate(`/movies?genre=${genre}`);
   };
 
+  // useEffect(() => {
+  //   if (filterData) {
+  //     setData(filterData);
+  //   }
+  // }, [filterData, page, sort, genre]);
   useEffect(() => {
     if (filterData) {
       setData(filterData);
     }
-  }, [filterData, page, sort, genre]);
-  if (isLoading) return <SpinnerMoviesPage />;
+  }, [filterData, setData]);
+
+  // 로딩, 에러처리
+  if (isFilterDataLoading || isGenreLoading) return <SpinnerMoviesPage />;
+  if (isFilterDataError)
+    return <Alert variant="danger">{filterError.message}</Alert>;
+  if (isGenreError) return <Alert variant="danger">{genreError.message}</Alert>;
   return (
     <div>
       {/* 장르 드롭다운 */}

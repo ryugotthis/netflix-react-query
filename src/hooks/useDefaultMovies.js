@@ -6,8 +6,6 @@ const fetchDefaultMovie = ({ page, keyword, sort, genre }) => {
   if (!keyword && !sort && !genre) {
     console.log('여긴 아무것도없을때');
     return api.get(`/discover/movie?sort_by=vote_count.desc&page=${page}`);
-  } else {
-    console.log('보자보자', keyword, sort, genre);
   }
 };
 
@@ -18,6 +16,6 @@ export const useDefaultMovieQuery = ({ page, keyword, sort, genre }) => {
     queryFn: () => fetchDefaultMovie({ page, keyword, sort, genre }),
     select: (result) => result.data,
     // enabled: !keyword && !sort && genre,
-    // enabled: !genre && !sort && !keyword,
+    enabled: !genre && !sort && !keyword && !!page,
   });
 };

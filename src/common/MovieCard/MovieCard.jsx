@@ -4,13 +4,18 @@ import Modal from 'react-bootstrap/Modal';
 import './MovieCard.css';
 import starIcon from '../../imgs/star.png';
 import { useMovieGenres } from '../../hooks/useMovieGenres';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie, key }) => {
-  // console.log('카드입니다', key, movie);
+  console.log('카드입니다', key, movie);
   const [modalShow, setModalShow] = React.useState(false);
   const { data: genreData } = useMovieGenres();
+  const navigate = useNavigate();
   // console.log('check genres', genreData);
-
+  const goToMovieDetail = () => {
+    navigate(`/movies/${movie.id}`);
+  };
   function MyVerticallyCenteredModal(props) {
     // console.log('속성을보자', props);
     const showGenres = (genreIdList) => {
@@ -54,10 +59,16 @@ const MovieCard = ({ movie, key }) => {
         >
           <div
             className="modal-explanation"
+            d
             style={{
               color: 'white',
             }}
           >
+            <Button
+              className="movie-card"
+              variant="danger"
+              onClick={goToMovieDetail}
+            >{`Start >`}</Button>
             <h1 style={{ fontSize: '40px' }}>{movie.title}</h1>
             <ul
               className="semi-title"

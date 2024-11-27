@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import api from '../utils/api';
 
-const fetchFilterMovie = ({ sort, genre, page, keyword }) => {
-  console.log('sort,genre', sort, genre, keyword);
+const fetchFilterMovie = ({ sort, genre, page }) => {
+  console.log('sort,genre', sort, genre);
   let baseUrl = ``;
 
   if (sort) {
@@ -28,10 +28,10 @@ const fetchFilterMovie = ({ sort, genre, page, keyword }) => {
   //   : api.get(`/discover/movie?with_genres=${genre}&page=${page}`);
 };
 
-export const useFilterMovieQuery = ({ sort, genre, page, keyword }) => {
+export const useFilterMovieQuery = ({ sort, genre, page }) => {
   return useQuery({
-    queryKey: ['filter-movie', sort, genre, page, keyword],
-    queryFn: () => fetchFilterMovie({ sort, genre, page, keyword }),
+    queryKey: ['filter-movie', sort, genre, page],
+    queryFn: () => fetchFilterMovie({ sort, genre, page }),
     select: (result) => result.data,
     enabled: !!genre || !!sort, // 장르나 정렬이 있을때만 활성화
   });

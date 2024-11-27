@@ -8,12 +8,16 @@ import ReactPaginate from 'react-paginate';
 import SpinnerMoviesPage from './components/Spinner/SpinnerMoviesPage';
 import Filter from './components/Filter/Filter';
 import { useDefaultMovieQuery } from '../../hooks/useDefaultMovies';
+import ResearchResult from './components/ResearchResult/ResearchResult';
+import { Alert } from 'react-bootstrap';
 
 // 이 페이지에 올 수 있는 경로 두가지
 // 1. nav 바에서 movies 클릭 -> popularMovie 보여주기
 // 2. keyword를 입력하서 search한 경우 -> keyword와 관련된 영화들 보여주기
+
 const MoviesPage = () => {
   const [query] = useSearchParams();
+  // 데이터가 달라지는 state 값이 본 페이지에 다 있어야 컨트롤이 쉽다.
   const keyword = query.get('q');
   const [sort, setSort] = useState('');
   const [genre, setGenre] = useState('');
@@ -24,8 +28,12 @@ const MoviesPage = () => {
   // 아마 함수에 인자 넘겨줄때는 이렇게 하는듯!
 
   // 기본 데이터
-  const { data: defaultData, isLoading: isDefaultDataLoading } =
-    useDefaultMovieQuery({ page, keyword, sort, genre });
+  const {
+    data: defaultData,
+    isLoading: isDefaultDataLoading,
+    isError: isDefaultDataError,
+    error: defaultDataError,
+  } = useDefaultMovieQuery({ page, keyword, sort, genre });
   // 검색 결과 데이터
   const {
     data: searchData,
@@ -41,6 +49,7 @@ const MoviesPage = () => {
     window.scrollTo(0, 0);
   };
 
+  // 키워드는 그대로인데 page가 바뀔때
   useEffect(() => {
     setData(defaultData);
     if (searchData) {
@@ -57,7 +66,12 @@ const MoviesPage = () => {
     }
   }, [keyword]);
 
+  // 로딩, 에러 처리
   if (isSearchDataLoading || isDefaultDataLoading) return <SpinnerMoviesPage />;
+  if (isSearchDataError)
+    return <Alert variant="danger">{searchDataError.message}</Alert>;
+  if (isDefaultDataError)
+    return <Alert variant="danger">{defaultDataError.message}</Alert>;
 
   return (
     <div style={{ padding: '0 2vw' }}>
@@ -73,18 +87,7 @@ const MoviesPage = () => {
         keyword={keyword}
       />
       {/* 검색 결과 알려주는 부분 */}
-      <div
-        style={{ color: 'white', marginTop: '10vw', padding: '5vw' }}
-        className="sub-title"
-      >
-        <div className="search-result">
-          {keyword
-            ? searchData?.length === 0
-              ? `Sorry, there is no result about "${keyword}"`
-              : `Search result of "${keyword}"`
-            : ''}
-        </div>
-      </div>
+      <ResearchResult searchData={searchData} keyword={keyword} />
       {/* 데이터 보여주는 부분 */}
       <Row className="custom-movie justify-content-center">
         {data?.results.map((movie, index) => {
