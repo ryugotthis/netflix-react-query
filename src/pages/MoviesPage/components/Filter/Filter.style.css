@@ -1,9 +1,12 @@
 .dropdown {
   position: absolute !important;
-  right: 5rem;
+  /* right: 5rem; */
+}
+.dropdown.sort-dropdown {
 }
 .genre-dropdown.dropdown {
-  right: 12rem;
+  /* right: 12rem; */
+  /* margin-left: 2vw; */
 }
 
 .dropdown button {

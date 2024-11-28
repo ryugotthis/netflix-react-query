@@ -80,7 +80,7 @@ const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
         </Dropdown.Menu>
       </Dropdown>
       {/* 정렬 드롭다운 */}
-      <Dropdown>
+      <Dropdown className="sort-dropdown">
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           {sort
             ? sortName.find((item) => item.value === sort)?.name

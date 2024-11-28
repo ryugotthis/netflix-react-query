@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import YouTube from 'react-youtube';
 import { useTrailerMovieQuery } from '../../hooks/useTrailerMovie';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDetailMovie } from '../../hooks/useDetailMovie';
 import { useReviewMovie } from '../../hooks/useReviewMovie';
 import Review from './components/Review/Review';
+import { IoMdArrowBack } from 'react-icons/io';
+import './MovieDetailPage.style.css';
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -25,6 +27,10 @@ const MovieDetailPage = () => {
   console.log('ㅇ넝ㅁㄴ언', detailData?.data);
   const { data: reviewData } = useReviewMovie({ id });
   console.log('리뷰는사랑', reviewData);
+  const navigate = useNavigate();
+  const goToMoviePage = () => {
+    navigate('/movies');
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
@@ -38,8 +44,12 @@ const MovieDetailPage = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        // position: 'relative',
       }}
     >
+      <div className="back-icon">
+        <IoMdArrowBack onClick={goToMoviePage} style={{ fontSize: '3rem' }} />
+      </div>
       <div
         className="youtube-box"
         style={{
@@ -90,7 +100,9 @@ const MovieDetailPage = () => {
           >{`Release date: ${detailData?.data.release_date}`}</h3>
         </div>
 
-        <p style={{ fontSize: '1.3rem' }}>{detailData?.data.overview}</p>
+        <p style={{ fontSize: '1.3rem', lineHeight: '1.2em' }}>
+          {detailData?.data.overview}
+        </p>
       </div>
       <Review reviews={reviewData} />
     </div>

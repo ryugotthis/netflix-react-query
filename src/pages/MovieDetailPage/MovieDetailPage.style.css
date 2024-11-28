@@ -1,0 +1,7 @@
+.back-icon {
+  width: 95vw;
+  margin: 0 0 1vw 0;
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
+}

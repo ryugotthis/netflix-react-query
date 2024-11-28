@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import './ReviewCard.style.css';
 const ReviewCard = ({ review }) => {
   const limit = 350;
   let [isShowMore, setShowMore] = useState(false);
@@ -25,29 +26,32 @@ const ReviewCard = ({ review }) => {
   };
 
   return (
-    <Card style={{ width: '90vw', marginBottom: '1rem' }}>
+    <Card
+      style={{
+        width: '90vw',
+        marginBottom: '1rem',
+        backgroundColor: '#121212',
+        color: '#fafafa',
+      }}
+    >
       <Card.Body>
         <Card.Title>{review?.author}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{`created ${review?.created_at.slice(
+        <Card.Subtitle className="mb-2 text-muted custom-muted">{`created ${review?.created_at.slice(
           0,
           10
         )}`}</Card.Subtitle>
-        <Card.Text>
+        <Card.Text style={{ lineHeight: '1.2rem', display: 'inline' }}>
           {reviewContent}
-          <p onClick={ShowMore} style={{ cursor: 'pointer' }}>
-            {review.content.length > limit ? more : ''}
-          </p>
-          {/* {isShowMore ? (
-            `${review.content} [Show less]`
-          ) : (
-            <p onClick={ShowMore}>{`${review.content.slice(
-              0,
-              limit
-            )} [...Show more]`}</p>
-          )} */}
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <span
+          className="more"
+          onClick={ShowMore}
+          style={{ cursor: 'pointer', color: '#bbbbbb' }}
+        >
+          {review.content.length > limit ? more : ''}
+        </span>
+        {/* <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="#">Another Link</Card.Link> */}
       </Card.Body>
     </Card>
   );
