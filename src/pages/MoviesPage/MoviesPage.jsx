@@ -74,7 +74,9 @@ const MoviesPage = () => {
     return <Alert variant="danger">{defaultDataError.message}</Alert>;
 
   return (
-    <div style={{ padding: '0 2vw' }}>
+    <div className="movies-page">
+      {/* 검색 결과 알려주는 부분 */}
+      <ResearchResult searchData={searchData} keyword={keyword} />
       {/* 필터부분 */}
       <Filter
         setData={setData}
@@ -86,16 +88,14 @@ const MoviesPage = () => {
         setGenre={setGenre}
         keyword={keyword}
       />
-      {/* 검색 결과 알려주는 부분 */}
-      <ResearchResult searchData={searchData} keyword={keyword} />
       {/* 데이터 보여주는 부분 */}
       <Row className="custom-movie justify-content-center">
         {data?.results.map((movie, index) => {
           return (
             <Col
-              lg="auto"
+              lg={3}
               md={6}
-              sm={12}
+              sm={11}
               key={index}
               style={{ padding: 0, borderRadius: 0, marginBottom: '2vw' }}
               className="custom-col"

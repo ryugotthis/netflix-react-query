@@ -1,33 +1,57 @@
 .banner {
   margin-bottom: 3vw;
-}
-.banner-img {
   background-size: cover;
   height: 80vh;
-  /* background-color: pink; */
   background-position: 50% 10%;
-
-  /* position: relative; */
+  position: relative;
 }
-.banner-img::before {
+.banner::before {
   content: '';
-  background: linear-gradient(
-    to top,
-    black,
-    transparent
-      /* to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 100% */
-  );
+  background: linear-gradient(to top, black, transparent);
   position: absolute;
   left: 0;
   height: inherit;
   width: 100%;
 }
-.explanation {
+.banner .explanation {
   position: absolute;
-  top: 55vh;
+  /* position: relative; */
+  /* top: 55vh; */
+  bottom: 0;
   left: 2vw;
   color: white;
   width: 40vw;
+}
+
+.banner .explanation h2 {
+  font-size: 6vw;
+  margin-bottom: 1vw;
+}
+/* style={{ fontSize: '30px', marginBottom: '1vw' }} */
+.banner .explanation p {
+  font-size: 1.8vw;
+  line-height: 1.2;
+  width: 60vw;
+}
+/* style={{ fontSize: '20px', lineHeight: 1.2, width: '60vw' }} */
+@media (max-width: 1199px) {
+  .banner .explanation {
+    left: 3vw;
+    width: 90vw;
+  }
+  .banner .explanation p {
+    font-size: 2vw;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .banner-img {
+    height: 60vh;
+  }
+  .banner .explanation h2 {
+    font-size: 9vw;
+  }
+  .banner .explanation p {
+    font-size: 3.5vw;
+  }
 }

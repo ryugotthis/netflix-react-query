@@ -63,7 +63,7 @@ const Filter = ({ setData, setPage, page, sort, setSort, genre, setGenre }) => {
     return <Alert variant="danger">{filterError.message}</Alert>;
   if (isGenreError) return <Alert variant="danger">{genreError.message}</Alert>;
   return (
-    <div>
+    <div className="dropdowns">
       {/* 장르 드롭다운 */}
       <Dropdown className="genre-dropdown">
         <Dropdown.Toggle variant="success" id="dropdown-basic">

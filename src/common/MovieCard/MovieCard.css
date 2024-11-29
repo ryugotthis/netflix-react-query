@@ -1,18 +1,32 @@
 /* movie-card */
 .movie-card {
-  /* overflow: hidden; */
   transition: 0.5s;
-  /* color: rgb(247, 216, 45) */
+  cursor: pointer;
 }
 .movie-card:hover {
   transform: scale(1.07);
   z-index: 2;
+}
+.movie-card img {
+  width: 100%;
+  padding: 0 0.5vw;
+  border-radius: 2vw;
 }
 
 /* 모달 창 */
 
 .modal-content {
   /* z-index: 5; */
+}
+.custom-modal-size .modal-content {
+  /* height: 100%; */
+  /* 모달 내용이 전체 높이를 차지하도록 설정 */
+}
+.modal-content .modal-header {
+  background-color: black;
+  color: white;
+  border: none;
+  /* zIndex: 2,??? */
 }
 /* Close 버튼을 하얀색으로 설정 */
 .custom-close-button .btn-close {
@@ -26,23 +40,14 @@
   background-color: #e0e0e0; /* 호버 시 색상 약간 변경 (필요 시) */
 }
 
-.custom-modal-size {
-  .custom-modal-size .modal-content {
-    height: 60vh; /* 세로 크기를 lg 크기의 약 3배로 조정 */
-    max-width: 500px; /* 모달의 최대 너비를 설정 */
-  }
-}
-.custom-modal-size .modal-content {
-  height: 100%; /* 모달 내용이 전체 높이를 차지하도록 설정 */
-  /* color: rgba(124, 119, 119, 0.674) */
-}
-.custom-modal-size .modal-body {
+.modal-content .modal-body {
+  background-size: cover;
+  background-position: 50% 10%;
   overflow-y: auto; /* 내용이 넘칠 경우 스크롤을 추가 */
   height: 80vh; /* 모달의 body 높이를 조정 */
 }
-
-.modal-explanation {
-  color: 'white';
+.modal-content .modal-body .modal-explanation {
+  color: white;
   background-color: rgba(124, 119, 119, 0.2);
   position: absolute;
   top: 0%;
@@ -54,37 +59,45 @@
   flex-direction: column;
   justify-content: end;
 }
-.modal-explanation > ul {
-  margin: 1vw 0;
-}
 
-.modal-explanation > ul li {
+.modal-content .modal-body .modal-explanation h1 {
+  font-size: 4.5vw;
+}
+.modal-content .modal-body .modal-explanation ul {
+  font-size: 2vw;
+  display: flex;
+  margin: 1vw 0;
+  width: 100%;
+}
+.modal-content .modal-body .modal-explanation ul li {
+  display: flex;
+  align-items: center;
   margin-right: 2vw;
-  /* color: rgb(194, 194, 194); */
+}
+.modal-content .modal-body .modal-explanation ul li.rating img {
+  width: 2.5vw;
+}
+.modal-content .modal-body .modal-explanation ul li.genre-highlight {
+  border-bottom: 2px solid yellow;
+}
+.modal-content .modal-body .modal-explanation p {
+  font-size: 1.5vw;
+  color: rgb(194, 194, 194);
+  line-height: 1.2;
 }
 
 .btn-danger {
-  /* --bs-btn-color: #fff; */
   --bs-btn-bg: red !important;
   --bs-btn-border-color: red !important;
-  /* --bs-btn-hover-color: #fff; */
+
   --bs-btn-hover-bg: rgb(187, 12, 12) !important;
   --bs-btn-hover-border-color: rgb(187, 12, 12) !important;
-  /* --bs-btn-focus-shadow-rgb: 225, 83, 97; */
-  /* --bs-btn-active-color: #fff; */
+
   --bs-btn-active-bg: rgb(187, 12, 12) !important;
   --bs-btn-active-border-color: rgb(187, 12, 12) !important;
-  /* position: relative; */
-  /* left: 0; */
-  width: 25%;
+
+  width: 20vw;
   margin: 2vw 0;
-  /* left: 4%;
-  bottom: 45%;
-  z-index: 5; */
-  /* --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #dc3545;
-  --bs-btn-disabled-border-color: #dc3545; */
 }
 
 .btn.movie-card {
@@ -102,3 +115,43 @@
   color: 'white' !important;
 } */
 /*  */
+@media (max-width: 1023px) {
+  .movie-card img {
+    padding: 0 1vw;
+    border-radius: 3vw;
+  }
+  .modal-content .modal-body .modal-explanation p {
+    margin-bottom: 5vw;
+  }
+  .modal-content .modal-body .modal-explanation {
+    /* padding: 2vw; */
+    /* margin-bottom: 5vw; */
+  }
+  .modal-content .modal-body .modal-explanation p {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 767px) {
+  .movie-card img {
+    padding: 0 1.5vw;
+    border-radius: 4vw;
+  }
+  .modal-content .modal-body .modal-explanation h1 {
+    font-size: 7vw;
+  }
+  .modal-content .modal-body .modal-explanation ul {
+    font-size: 4vw;
+    display: flex;
+    margin: 1vw 0;
+    width: 100%;
+  }
+  .btn-danger {
+    width: 45vw;
+    /* margin: 2vw 0; */
+    /* font-size: 2vw; */
+  }
+  .modal-content .modal-body .modal-explanation p {
+    font-size: 3vw;
+    margin-bottom: 10vw;
+  }
+}

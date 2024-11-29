@@ -1,12 +1,14 @@
+.dropdowns {
+  display: flex;
+  justify-content: end;
+}
 .dropdown {
-  position: absolute !important;
+  position: relative !important;
+  /* width: 50vw; */
+  /* right: 0; */
+  margin: -5vw 1vw 4vw 1vw;
+
   /* right: 5rem; */
-}
-.dropdown.sort-dropdown {
-}
-.genre-dropdown.dropdown {
-  /* right: 12rem; */
-  /* margin-left: 2vw; */
 }
 
 .dropdown button {
@@ -20,4 +22,11 @@
 .dropdown .dropdown-menu a.dropdown-item:hover {
   background-color: black;
   color: white;
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    margin-bottom: 10vw;
+    margin-top: 0;
+  }
 }

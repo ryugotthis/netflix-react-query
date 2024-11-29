@@ -1,31 +1,26 @@
+.movie-slider h2 {
+  margin: 1vw 0.5vw;
+  color: red;
+  font-size: 3vw;
+  /* font-size: 36px; */
+}
+
 .carousel-container {
   position: relative;
   /* overflow: hidden; */
-  height: 50vh;
+  height: 40vh;
 }
 
-.carousel-container::before,
-.carousel-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 40px; /* partialVisibilityGutter와 같은 값 설정 */
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 흐린 색상 설정 */
-  z-index: 1;
-  pointer-events: none; /* 클릭 등 이벤트 무시 */
+@media (max-width: 1023px) {
+  .movie-slider h2 {
+    font-size: 5vw;
+    margin-left: 1.5vw;
+  }
+  .carousel-container {
+    /* height: 50vh; */
+  }
 }
-
-.carousel-container::before {
-  left: 0;
-}
-
-.carousel-container::after {
-  right: 0;
-}
-
-/* 이게모지 */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .carousel-container {
     height: 330px;
     display: flex;
