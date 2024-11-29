@@ -16,6 +16,7 @@ function App() {
     <div>
       <Reset />
       {/* 화면마다 nav바가 달라질수 있어서 다양한 navbar를 만들어 layout으로 구분한 폴더 생성 */}
+
       <Routes>
         <Route path="/" element={<AppLayout />}>
           {/* index의미는 위의 경로(path)와 같다 */}
