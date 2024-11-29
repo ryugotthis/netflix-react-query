@@ -11,6 +11,8 @@ export const useTrailerMovieQuery = ({ id }) => {
   return useQuery({
     queryKey: ['trailer-movie', id],
     queryFn: () => fetchTrailerMovie({ id }),
-    // select: (result) => result.data,
+    // 이게 중요했음
+    enabled: !!id,
+    select: (result) => result.data,
   });
 };

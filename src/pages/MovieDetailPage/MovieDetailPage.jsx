@@ -11,6 +11,7 @@ import './MovieDetailPage.style.css';
 const MovieDetailPage = () => {
   const { id } = useParams();
   const { data: trailerData } = useTrailerMovieQuery({ id });
+
   const opts = {
     width: '100%', // 너비를 화면에 맞게 조정
     height: '100%', // 비율에 맞춰 자동으로 높이 조정
@@ -22,6 +23,7 @@ const MovieDetailPage = () => {
   };
 
   const { data: detailData } = useDetailMovie({ id });
+  console.log('디테일볼게여', detailData);
   const { data: reviewData } = useReviewMovie({ id });
   const navigate = useNavigate();
   const goToMoviePage = () => {
@@ -36,14 +38,12 @@ const MovieDetailPage = () => {
       <div className="back-icon">
         <IoMdArrowBack onClick={goToMoviePage} style={{ fontSize: '3rem' }} />
       </div>
+      {/* {detailData} */}
       <div className="youtube-box">
         {
           <YouTube
             className="youtube-element"
-            videoId={
-              trailerData?.data?.results[0]?.id &&
-              trailerData.data.results[0].id
-            }
+            videoId={trailerData?.results[0]?.key && trailerData.results[0].key}
             opts={opts}
           />
         }

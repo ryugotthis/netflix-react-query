@@ -9,5 +9,6 @@ export const useReviewMovie = ({ id }) => {
     queryKey: ['review-movie', id],
     queryFn: () => fetchReviewMovie({ id }),
     select: (result) => result.data.results,
+    enabled: !!id,
   });
 };
