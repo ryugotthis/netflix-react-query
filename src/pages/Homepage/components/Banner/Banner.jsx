@@ -6,7 +6,6 @@ import SpinnerCommon from '../../../../common/SpinnerCommon/SpinnerCommon';
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMovieQuery();
-  console.log(data);
 
   if (isLoading) return <SpinnerCommon />;
   if (isError) return <Alert variant="danger">{error.message}</Alert>;
@@ -16,7 +15,7 @@ const Banner = () => {
       style={{
         backgroundImage:
           'url(' +
-          `https://image.tmdb.org/t/p/w500${data.results[4].poster_path}` +
+          `https://image.tmdb.org/t/p/w500${data.results[1].poster_path}` +
           ')',
       }}
     >
