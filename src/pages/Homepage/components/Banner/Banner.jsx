@@ -15,13 +15,13 @@ const Banner = () => {
       style={{
         backgroundImage:
           'url(' +
-          `https://image.tmdb.org/t/p/w500${data.results[1].poster_path}` +
+          `https://image.tmdb.org/t/p/w500${data.results[2].poster_path}` +
           ')',
       }}
     >
       <div className="explanation">
-        <h2>{data.results[4].title}</h2>
-        <p>{data.results[4].overview}</p>
+        <h2>{data.results[2].title}</h2>
+        <p>{data.results[2].overview}</p>
       </div>
     </div>
   );
