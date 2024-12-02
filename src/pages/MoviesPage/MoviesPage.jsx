@@ -66,7 +66,7 @@ const MoviesPage = () => {
   }, [keyword]);
 
   // 로딩, 에러 처리
-  if (isSearchDataLoading || isDefaultDataLoading) return <SpinnerMoviesPage />;
+  if (isSearchDataLoading && isDefaultDataLoading) return <SpinnerMoviesPage />;
   if (isSearchDataError)
     return <Alert variant="danger">{searchDataError.message}</Alert>;
   if (isDefaultDataError)
