@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import LogoImg from '../imgs/logo.png';
 
 import { Outlet, useNavigate } from 'react-router-dom';
 import '../layout/AppLayout.style.css';
@@ -37,12 +38,7 @@ const AppLayout = () => {
         <Container fluid>
           {/*  네비게이션 바의 브랜드(로고 또는 사이트 이름)를 표시하는 요소 */}
           <Navbar.Brand href="/">
-            <img
-              className="logo-img"
-              width={148}
-              src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
-              alt="logo"
-            />
+            <img className="logo-img" width={210} src={LogoImg} alt="logo" />
           </Navbar.Brand>
 
           {/* 모바일 화면에서 메뉴를 펼치고 접는 토글 버튼을 설정하는 속성 */}
