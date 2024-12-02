@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ResearchResult = ({ searchData, keyword }) => {
+  console.log('heyy', searchData);
   return (
     <div
       style={{
@@ -13,7 +14,7 @@ const ResearchResult = ({ searchData, keyword }) => {
     >
       <p className="search-result">
         {keyword
-          ? searchData?.length === 0
+          ? searchData?.results.length === 0
             ? `Sorry, there is no result about "${keyword}"`
             : `Search result of "${keyword}"`
           : ''}
