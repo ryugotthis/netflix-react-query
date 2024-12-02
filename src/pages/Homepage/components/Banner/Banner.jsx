@@ -2,13 +2,13 @@ import React from 'react';
 import { usePopularMovieQuery } from '../../../../hooks/usePopularMovies';
 import Alert from 'react-bootstrap/Alert';
 import './Banner.style.css';
-import SpinnerHomepage from '../SpinnerHomepage/SpinnerHomepage';
+import SpinnerCommon from '../../../../common/SpinnerCommon/SpinnerCommon';
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMovieQuery();
   console.log(data);
 
-  if (isLoading) return <SpinnerHomepage />;
+  if (isLoading) return <SpinnerCommon />;
   if (isError) return <Alert variant="danger">{error.message}</Alert>;
   return (
     <div

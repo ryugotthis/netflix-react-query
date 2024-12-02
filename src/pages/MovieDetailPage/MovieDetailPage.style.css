@@ -28,53 +28,8 @@
   height: 100%;
 }
 
-/* 세부 정보 */
-.movie-detail .details {
-  width: 90vw;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2vw 0;
-}
-.movie-detail .details h1 {
-  font-size: 3rem;
-}
-.movie-detail .details .keyword-infos {
-  font-size: 1.5rem;
-  display: flex;
-  margin: 1.6vw 0;
-}
-.movie-detail .details .keyword-infos h3 {
-  margin-right: 1.5rem;
-}
-.movie-detail .details p {
-  font-size: 1.3rem;
-  line-height: 1.2em;
-}
-@media (max-width: 1023px) {
-  .movie-detail .details {
-    height: 23vh;
-  }
-}
 @media (max-width: 767px) {
   .movie-detail {
     margin-top: 8vw;
-  }
-  .movie-detail .details {
-    padding: 2vw;
-    width: 85vw;
-    height: 47vh;
-  }
-  .movie-detail .details h1 {
-    font-size: 2.5rem;
-  }
-  .movie-detail .details .keyword-infos {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-  }
-  .movie-detail .details p {
-    font-size: 1.1rem;
-    /* line-height: 1.2em; */
   }
 }

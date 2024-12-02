@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useDefaultMovieQuery } from '../../hooks/useDefaultMovies';
 import { useSearchMovieQuery } from '../../hooks/useSearchMovie';
 import { useSearchParams } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
-import './MoviesPage.style.css';
+import Filter from './components/Filter/Filter';
+import ResearchResult from './components/ResearchResult/ResearchResult';
 import MovieCard from '../../common/MovieCard/MovieCard';
 import ReactPaginate from 'react-paginate';
 import SpinnerMoviesPage from './components/Spinner/SpinnerMoviesPage';
-import Filter from './components/Filter/Filter';
-import { useDefaultMovieQuery } from '../../hooks/useDefaultMovies';
-import ResearchResult from './components/ResearchResult/ResearchResult';
 import { Alert } from 'react-bootstrap';
-
+import './MoviesPage.style.css';
 // 이 페이지에 올 수 있는 경로 두가지
 // 1. nav 바에서 movies 클릭 -> popularMovie 보여주기
 // 2. keyword를 입력하서 search한 경우 -> keyword와 관련된 영화들 보여주기

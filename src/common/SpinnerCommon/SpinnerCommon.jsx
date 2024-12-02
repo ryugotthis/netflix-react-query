@@ -1,10 +1,10 @@
 import React from 'react';
-import './SpinnerHomepage.style.css';
+import './SpinnerCommon.style.css';
 import Spinner from 'react-bootstrap/Spinner';
 
-const SpinnerHomepage = () => {
+const SpinnerCommon = () => {
   return (
-    <div className="spinner-homepage">
+    <div className="spinner-common">
       <Spinner
         animation="border"
         style={{
@@ -16,4 +16,4 @@ const SpinnerHomepage = () => {
   );
 };
 
-export default SpinnerHomepage;
+export default SpinnerCommon;

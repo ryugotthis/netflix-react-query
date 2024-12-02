@@ -1,0 +1,10 @@
+/* 유튜브 박스 */
+.youtube-box {
+  width: 90vw;
+  height: 60vh;
+}
+
+.youtube-box .youtube-element {
+  width: 100%;
+  height: 100%;
+}

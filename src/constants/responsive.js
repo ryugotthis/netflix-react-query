@@ -13,7 +13,7 @@ export const responsive = {
     // slidesToSlide: 2, // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 463, min: 0 },
+    breakpoint: { max: 767, min: 0 },
     items: 1,
     partialVisibilityGutter: 0,
     // slidesToSlide: 1, // optional, default to 1.

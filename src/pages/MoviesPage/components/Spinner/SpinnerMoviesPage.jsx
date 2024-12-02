@@ -2,7 +2,6 @@ import React from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 
 const SpinnerMoviesPage = () => {
-  console.log('스피너야');
   return (
     <div
       style={{

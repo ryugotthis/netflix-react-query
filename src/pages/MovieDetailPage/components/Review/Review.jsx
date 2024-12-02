@@ -1,7 +1,18 @@
 import React from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
+import { useReviewMovie } from '../../../../hooks/useReviewMovie';
+import SpinnerCommon from '../../../../common/SpinnerCommon/SpinnerCommon';
+import { Alert } from 'react-bootstrap';
 
-const Review = ({ reviews }) => {
+const Review = ({ id }) => {
+  const {
+    data: reviewData,
+    isLoading,
+    isError,
+    error,
+  } = useReviewMovie({ id });
+  if (isLoading) return <SpinnerCommon />;
+  if (isError) return <Alert variant="danger">{error.message}</Alert>;
   return (
     <>
       <h2
@@ -9,7 +20,7 @@ const Review = ({ reviews }) => {
       >
         Review
       </h2>
-      {reviews?.map((review) => (
+      {reviewData?.map((review) => (
         <ReviewCard review={review} />
       ))}
     </>

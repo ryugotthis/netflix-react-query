@@ -55,8 +55,11 @@ const MovieCard = ({ movie, key }) => {
               </li>
               <li>{movie.release_date.slice(0, 4)}</li>
               <li style={{ color: 'red' }}>{movie.adult ? '' : '19+'}</li>
-              {showGenres(movie.genre_ids).map((genre) => (
-                <li className="genre-highlight">{`#${genre}`}</li>
+              {showGenres(movie.genre_ids).map((genre, index) => (
+                <li
+                  key={`${genre}-${index}`}
+                  className="genre-highlight"
+                >{`#${genre}`}</li>
               ))}
             </ul>
 
