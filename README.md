@@ -1,6 +1,7 @@
 # 영화 웹 사이트 RYUFILM
 
-[배포 주소](https://ryufilm.netlify.app/)
+## [사이트이동](https://ryufilm.netlify.app/)
+
 ![대표이미지](./images/ryuflix_representative.png)
 
 ## 💻프로젝트 소개
@@ -54,12 +55,16 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 | ![홈페이지](./images/hompage_component.png) | ![상세페이지](./images/moviedetailpage_component.png) |
 | ------------------------------------------- | ----------------------------------------------------- |
 
-- 데이터 불러오는 부분을 custom hook으로 생성
-  ![hooks](./images/hooks.png)
+### 데이터 불러오는 부분을 custom hook으로 생성
+
+![hooks](./images/hooks.png)
 
 ## 반응형
 
-- 태블릿
-  ![태블릿](./images/tablet_moviedetailpage2.gif)
-- 모바일
-  ![모바일](./images/mobile.gif)
+### 태블릿
+
+![태블릿](./images/tablet_moviedetailpage2.gif)
+
+### 모바일
+
+![모바일](./images/mobile.gif)
