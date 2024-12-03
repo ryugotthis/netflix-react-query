@@ -16,19 +16,19 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### 홈페이지
 
-![홈페이지](./images/ryuflix_representative.png)
-
-- 3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
+3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
+![홈페이지](./images/homepage.png)
 
 ### 전체 영화 페이지
 
-![키워드](./images/MoviesPage_search.png)
-
 - 키워드로 검색
-  ![장르](./images/MoviesPage_genre.png)
+  ![키워드](./images/MoviesPage_search.png)
+
 - 장르 선택
-  ![정렬](./images/MoviesPage_sortby.png)
+  ![장르](./images/MoviesPage_genre.png)
+
 - 정렬선택
+  ![정렬](./images/MoviesPage_sortby.png)
 
 ### 영화 상세정보 페이지
 
@@ -43,7 +43,7 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ## 특징
 
-### **React** Query를 사용해서 서버tkdxo 관리
+### **React** Query를 사용해서 서버상태 관리
 
 <!-- <p>
   <img src="./images/react_query.png" width="200">
