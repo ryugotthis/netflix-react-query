@@ -21,6 +21,8 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### 전체 영화 페이지
 
+---
+
 - 키워드로 검색
   ![키워드](./images/MoviesPage_search.png)
 
@@ -32,14 +34,17 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### 영화 상세정보 페이지
 
-![모달창](./images/MoviesPage_modal.png)
+---
 
 - 무비 카드 모달창의 Start 버튼 누르면 영화 상세정보 페이지로 이동
-  ![예고편](./images/MoviesDetailPage1.png)
+  ![모달창](./images/MoviesPage_modal.png)
 - 예고편 유튜브 영상
-  ![후기](./images/MoviesDetailPage2.png)
+
+  ![예고편](./images/MoviesDetailPage1.png)
+
 - 상세 정보
 - 후기 댓글
+  ![후기](./images/MoviesDetailPage2.png)
 
 ## 특징
 
