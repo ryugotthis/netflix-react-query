@@ -6,7 +6,7 @@
 
 NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
-## 구성과 기능
+## 📌구성과 기능
 
 3개의 페이지
 
@@ -39,25 +39,19 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 - 상세 정보
 - 후기 댓글
   ![모달창](./images/pc_moviedetailpage1.gif)
-  ![예고편](./images/pc_moviedetailpage2.gif)
+  <!-- ![예고편](./images/pc_moviedetailpage2.gif) -->
 
-## 특징
+## 💡특징
 
 ### **React** Query를 사용해서 서버상태 관리
-
-<!-- <p>
-  <img src="./images/react_query.png" width="200">
-  <img src="./images/react_query2.png" width="200">
-</p> -->
-<!-- <div style="text-align: center;">
-  <img src="./images/react_query.png" alt="이미지1 설명" style="margin-bottom: 5px;" />
-  <img src="./images/react_query2.png" alt="이미지2 설명" style="margin-top: 5px;" />
-</div> -->
 
 | ![react query](./images/react_query.png) | ![react query](./images/react_query2.png) |
 | ---------------------------------------- | ----------------------------------------- |
 
-### 각 페이지마다 비즈니스 로직과 UI를 분리하여 컴포넌트 구성
+### 각 페이지마다 최대한 비즈니스 로직과 UI를 분리하여 컴포넌트 구성
+
+| ![홈페이지](./images/hompage_component.png) | ![상세페이지](./images/moviedetailpage_component.png) |
+| ------------------------------------------- | ----------------------------------------------------- |
 
 - 데이터 불러오는 부분을 custom hook으로 생성
   ![hooks](./images/hooks.png)
