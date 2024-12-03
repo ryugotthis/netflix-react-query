@@ -53,7 +53,7 @@ React와 React Query를 활용해 TMDb API에서 데이터를 가져와 동적�
 
 ### 영화 상세 페이지
 
-![영화 상세정보](./images/moviedetailpage_component.png)
+![영화 상세정보](./images/pc_moviedetailpage1.gif)
 
 - 예고편 유튜브 영상
 - 상세 정보와 후기 댓글 표시
@@ -72,7 +72,7 @@ React와 React Query를 활용해 TMDb API에서 데이터를 가져와 동적�
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Redux, Bootstrap CSS, React Query
+- **Frontend:** React, Bootstrap CSS, React Query
 - **API:** TMDb API
 - **Deployment:** Netlify
 
