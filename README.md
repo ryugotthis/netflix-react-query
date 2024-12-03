@@ -10,10 +10,14 @@ NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### React Query를 사용해서 서버데이터를 관리
 
-<p>
+<!-- <p>
   <img src="./images/react_query.png" width="200">
   <img src="./images/react_query2.png" width="200">
-</p>
+</p> -->
+<div style="display: flex; width: 100%; height: auto;">
+  <img src="./images/react_query.png" alt="이미지1 설명" style="flex: 4; width: 40%; height: auto;" />
+  <img src="./images/react_query2.png" alt="이미지2 설명" style="flex: 6; width: 60%; height: auto;" />
+</div>
 
 <!-- | ![react query](./images/react_query.png){:width:"30%"} | ![react query](./images/react_query2.png){:width:"50%"} |
 | ------------------------------------------------------ | ------------------------------------------------------- | -->
