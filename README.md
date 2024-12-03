@@ -17,7 +17,7 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 ### 홈페이지
 
 3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
-![홈페이지](./images/homepage.png)
+![홈페이지](./images/homepage.gif)
 
 ### 전체 영화 페이지
 
