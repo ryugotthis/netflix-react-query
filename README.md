@@ -16,35 +16,30 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### 홈페이지
 
-3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
-![홈페이지](./images/homepage.gif)
+- 3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
+  ![홈페이지](./images/homepage.gif)
 
 ### 전체 영화 페이지
 
 ---
 
-- 키워드로 검색
-  ![키워드](./images/pc_moviespage1.gif)
-
 - 장르 선택
-  ![장르](./images/pc_moviespage_search.gif)
-
 - 정렬선택
-  ![정렬](./images/MoviesPage_sortby.png)
+- 키워드로 검색
+- 페이지네이션
+  ![필터](./images/pc_moviespage1.gif)
+  ![키워드](./images/pc_moviespage_search.gif)
 
 ### 영화 상세정보 페이지
 
 ---
 
 - 무비 카드 모달창의 Start 버튼 누르면 영화 상세정보 페이지로 이동
-  ![모달창](./images/MoviesPage_modal.png)
 - 예고편 유튜브 영상
-
-  ![예고편](./images/MoviesDetailPage1.png)
-
 - 상세 정보
 - 후기 댓글
-  ![후기](./images/MoviesDetailPage2.png)
+  ![모달창](./images/pc_moviedetailpage1.gif)
+  ![예고편](./images/pc_moviedetailpage2.gif)
 
 ## 특징
 
