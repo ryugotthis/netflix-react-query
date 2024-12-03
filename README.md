@@ -4,11 +4,46 @@
 
 ## 💻프로젝트 소개
 
-NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
+NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
+
+## 구성과 기능
+
+3개의 페이지
+
+- 홈페이지(HomePage)
+- 전체 영화 페이지(MoviesPage)
+- 영화 상세정보 페이지(MovieDetailPage)
+
+### 홈페이지
+
+![홈페이지](./images/ryuflix_representative.png)
+
+- 3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
+
+### 전체 영화 페이지
+
+![키워드](./images/MoviesPage_search.png)
+
+- 키워드로 검색
+  ![장르](./images/MoviesPage_genre.png)
+- 장르 선택
+  ![정렬](./images/MoviesPage_sortby.png)
+- 정렬선택
+
+### 영화 상세정보 페이지
+
+![모달창](./images/MoviesPage_modal.png)
+
+- 무비 카드 모달창의 Start 버튼 누르면 영화 상세정보 페이지로 이동
+  ![예고편](./images/MoviesDetailPage1.png)
+- 예고편 유튜브 영상
+  ![후기](./images/MoviesDetailPage2.png)
+- 상세 정보
+- 후기 댓글
 
 ## 특징
 
-### React Query를 사용해서 서버데이터를 관리
+### **React** Query를 사용해서 서버tkdxo 관리
 
 <!-- <p>
   <img src="./images/react_query.png" width="200">
