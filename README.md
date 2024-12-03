@@ -10,7 +10,8 @@ NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 
 ### React Query를 사용해서 서버데이터를 관리
 
-| ![react query](./images/react_query.png) | ![react query](./images/react_query2.png) |
+| ![react query](./images/react_query.png){:width:"30%"} | ![react query](./images/react_query2.png){:width:"50%"} |
+| ------------------------------------------------------ | ------------------------------------------------------- |
 
 ### 각 페이지마다 비즈니스 로직과 UI를 분리하여 컴포넌트 구성
 
