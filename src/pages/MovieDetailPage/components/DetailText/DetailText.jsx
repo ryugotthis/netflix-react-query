@@ -21,7 +21,6 @@ const DetailText = ({ id }) => {
         <h3>{`Runtime: ${detailData?.data.runtime}min`}</h3>
         <h3>{`Release date: ${detailData?.data.release_date}`}</h3>
       </div>
-
       <p>{detailData?.data.overview}</p>
     </div>
   );

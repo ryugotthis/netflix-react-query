@@ -9,6 +9,5 @@ export const useDetailMovie = ({ id }) => {
     queryKey: ['movie-genres', id],
     queryFn: () => fetchDetailMovie({ id }),
     enabled: !!id,
-    // select: (result) => result.data.genres,
   });
 };
