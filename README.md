@@ -11,8 +11,8 @@ NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 ### React Query를 사용해서 서버데이터를 관리
 
 <p>
-  <img src="./images/react_query.png">
-  <img src="./images/react_query2.png">
+  <img src="./images/react_query.png" width="200">
+  <img src="./images/react_query2.png" width="200">
 </p>
 
 <!-- | ![react query](./images/react_query.png){:width:"30%"} | ![react query](./images/react_query2.png){:width:"50%"} |
