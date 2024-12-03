@@ -5,10 +5,8 @@ const fetchSearchMovie = ({ keyword, page }) => {
   let baseUrl = ``;
   if (keyword) {
     baseUrl = `/search/movie?query=${keyword}&page=${page}`;
-    console.log('현재 url은', baseUrl);
   } else {
     baseUrl = `/discover/movie?sort_by=vote_count.desc&page=${page}`;
-    console.log('현재 url은', baseUrl);
   }
   return api.get(baseUrl);
 
@@ -18,7 +16,6 @@ const fetchSearchMovie = ({ keyword, page }) => {
 };
 
 export const useSearchMovieQuery = ({ keyword, page }) => {
-  console.log('keyword,page', keyword, page);
   return useQuery({
     queryKey: ['search-movie', keyword, page],
     queryFn: () => fetchSearchMovie({ keyword, page }),

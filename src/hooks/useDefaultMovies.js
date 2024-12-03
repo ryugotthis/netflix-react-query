@@ -2,9 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import api from '../utils/api';
 
 const fetchDefaultMovie = ({ page, keyword, sort, genre }) => {
-  console.log('답답해');
   if (!keyword && !sort && !genre) {
-    console.log('여긴 아무것도없을때');
     return api.get(`/discover/movie?sort_by=vote_count.desc&page=${page}`);
   }
 };

@@ -1,8 +1,5 @@
 import React from 'react';
 import Banner from './components/Banner/Banner';
-
-//여기에 api 부르는게 맞는지 모르겠지만
-
 import PopularMovieSlider from './components/PopularMovieSlider/PopularMovieSlider';
 import TopRatedMovieSlider from './components/TopRatedMovieSlider/TopRatedMovieSlider';
 import UpcomingMovieSlider from './components/UpcomingMovieSlider/UpcomingMovieSlider';
