@@ -14,16 +14,10 @@ NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
   <img src="./images/react_query.png" width="200">
   <img src="./images/react_query2.png" width="200">
 </p> -->
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="width: 40%; padding: 0; margin: 0;">
-      <img src="./images/react_query.png" alt="이미지1 설명" style="width: 100%; height: 100%;" />
-    </td>
-    <td style="width: 60%; padding: 0; margin: 0;">
-      <img src="./images/react_query2.png" alt="이미지2 설명" style="width: 100%; height: 100%;" />
-    </td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between; width: 100%;">
+  <img src="./images/react_query.png" alt="이미지1 설명" style="width: 40%; height: auto;" />
+  <img src="./images/react_query2.png" alt="이미지2 설명" style="width: 60%; height: auto;" />
+</div>
 
 <!-- | ![react query](./images/react_query.png){:width:"30%"} | ![react query](./images/react_query2.png){:width:"50%"} |
 | ------------------------------------------------------ | ------------------------------------------------------- | -->
