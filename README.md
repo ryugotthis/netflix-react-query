@@ -24,10 +24,10 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 ---
 
 - 키워드로 검색
-  ![키워드](./images/MoviesPage_search.png)
+  ![키워드](./images/pc_moviespage1.gif)
 
 - 장르 선택
-  ![장르](./images/MoviesPage_genre.png)
+  ![장르](./images/pc_moviespage_search.gif)
 
 - 정렬선택
   ![정렬](./images/MoviesPage_sortby.png)
