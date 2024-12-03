@@ -16,12 +16,12 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
 - 전체 영화 페이지(MoviesPage)
 - 영화 상세정보 페이지(MovieDetailPage)
 
-### 홈페이지
+### 1.홈페이지
 
 - 3개 카테고리의 슬라이더(Popular, Top Rated, Upcoming)
   ![홈페이지](./images/homepage.gif)
 
-### 전체 영화 페이지
+### 2.전체 영화 페이지
 
 ---
 
@@ -32,7 +32,7 @@ NETFLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
   ![필터](./images/pc_moviespage1.gif)
   ![키워드](./images/pc_moviespage_search.gif)
 
-### 영화 상세정보 페이지
+### 3.영화 상세정보 페이지
 
 ---
 
