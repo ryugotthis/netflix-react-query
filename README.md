@@ -14,13 +14,13 @@ NETLIX를 참고해서 만든 영화 정보 제공 사이트입니다.
   <img src="./images/react_query.png" width="200">
   <img src="./images/react_query2.png" width="200">
 </p> -->
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
   <img src="./images/react_query.png" alt="이미지1 설명" style="margin-bottom: 5px;" />
   <img src="./images/react_query2.png" alt="이미지2 설명" style="margin-top: 5px;" />
-</div>
+</div> -->
 
-<!-- | ![react query](./images/react_query.png){:width:"30%"} | ![react query](./images/react_query2.png){:width:"50%"} |
-| ------------------------------------------------------ | ------------------------------------------------------- | -->
+| ![react query](./images/react_query.png) | ![react query](./images/react_query2.png) |
+| ---------------------------------------- | ----------------------------------------- |
 
 ### 각 페이지마다 비즈니스 로직과 UI를 분리하여 컴포넌트 구성
 
